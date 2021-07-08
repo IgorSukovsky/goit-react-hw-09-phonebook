@@ -20,8 +20,6 @@ const fetchContact = () => async dispatch => {
   } catch (error) {
     dispatch(fetchContactError(error.massage));
   }
-
-
 };
 
 const addContacts = contactForm => dispatch => {
@@ -44,4 +42,5 @@ const deleteContacts = id => dispatch => {
     .catch(error => dispatch(deleteContactError(error.massage)));
 };
 
-export default { fetchContact, addContacts, deleteContacts };
+const contactOperations = { fetchContact, addContacts, deleteContacts };
+export default contactOperations;
