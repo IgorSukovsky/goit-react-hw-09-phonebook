@@ -12,8 +12,6 @@ const token = {
   },
 };
 
-
-
 const register = credentials => async dispatch => {
   dispatch(authActions.registerRequest());
 
@@ -26,8 +24,6 @@ const register = credentials => async dispatch => {
     dispatch(authActions.registerError(error.message));
   }
 };
-
-
 
 const logIn = credentials => async dispatch => {
   dispatch(authActions.loginRequest());
@@ -42,8 +38,6 @@ const logIn = credentials => async dispatch => {
   }
 };
 
-
-
 const logOut = () => async dispatch => {
   dispatch(authActions.logoutRequest());
 
@@ -56,8 +50,6 @@ const logOut = () => async dispatch => {
     dispatch(authActions.logoutError(error.message));
   }
 };
-
-
 
 const getCurrentUser = () => async (dispatch, getState) => {
   const {
@@ -80,4 +72,5 @@ const getCurrentUser = () => async (dispatch, getState) => {
   }
 };
 
-export default { register, logIn, logOut, getCurrentUser };
+const authOperations = { register, logIn, logOut, getCurrentUser };
+export default authOperations;

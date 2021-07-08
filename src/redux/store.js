@@ -38,4 +38,6 @@ const store = configureStore({
 
 const persistor = persistStore(store);
 
-export default { store, persistor };
+const authStore = { store, persistor };
+
+export default authStore;

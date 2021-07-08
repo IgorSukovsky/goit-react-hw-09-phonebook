@@ -2,7 +2,6 @@ const getIsAuthenticated = state => state.auth.isAuthenticated;
 
 const getUsername = state => state.auth.user.name;
 
-export default {
-  getIsAuthenticated,
-  getUsername,
-};
+const authSelectors = { getIsAuthenticated, getUsername };
+
+export default authSelectors;
